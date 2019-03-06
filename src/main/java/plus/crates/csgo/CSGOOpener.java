@@ -3,7 +3,6 @@ package plus.crates.csgo;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -15,6 +14,7 @@ import plus.crates.Crates.Crate;
 import plus.crates.Crates.KeyCrate;
 import plus.crates.Crates.Winning;
 import plus.crates.Opener.Opener;
+import plus.crates.Utils.LegacyMaterial;
 
 import java.io.IOException;
 import java.util.*;
@@ -45,8 +45,8 @@ public class CSGOOpener extends Opener {
         length = config.getInt("Length") * 10; // Convert to "half ticks"
         slowSpeedTime = length / 20;
         fastSpeedTime = (length / 10) * 9;
-        redstoneTorchOff = new ItemStack(Material.REDSTONE_TORCH_OFF);
-        redstoneTorchOn = new ItemStack(Material.REDSTONE_TORCH_ON);
+        redstoneTorchOff = new ItemStack(LegacyMaterial.REDSTONE_TORCH_ON.getMaterial());
+        redstoneTorchOn = new ItemStack(LegacyMaterial.REDSTONE_TORCH_ON.getMaterial());
         ItemMeta torchMeta = redstoneTorchOff.getItemMeta();
         torchMeta.setDisplayName(ChatColor.RESET + " ");
         redstoneTorchOff.setItemMeta(torchMeta);
@@ -130,7 +130,7 @@ public class CSGOOpener extends Opener {
                     } else if (i >= 10 && i <= 16) {
                         gui.setItem(i, items.get(i - 10));
                     } else {
-                        ItemStack itemStack = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) new Random().nextInt(15));
+                        ItemStack itemStack = new ItemStack(LegacyMaterial.STAINED_GLASS_PANE.getMaterial(), 1, (short) new Random().nextInt(15));
                         ItemMeta itemMeta = itemStack.getItemMeta();
                         itemMeta.setDisplayName(ChatColor.RESET + " ");
                         itemStack.setItemMeta(itemMeta);
