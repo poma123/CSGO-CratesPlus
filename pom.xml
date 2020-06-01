@@ -44,16 +44,17 @@
     </repositories>
     <dependencies>
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.9-R0.1-SNAPSHOT</version>
+            <groupId>com.destroystokyo.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.15.2-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.connorlinfoot</groupId>
             <artifactId>CratesPlus</artifactId>
             <version>5.0-SNAPSHOT-5</version>
             <scope>system</scope>
-            <systemPath>${basedir}/lib/CratesPlus-5.0-SNAPSHOT-5.jar</systemPath>
+            <systemPath>${basedir}/CratesPlus-4.5.1.jar</systemPath>
         </dependency>
     </dependencies>
 

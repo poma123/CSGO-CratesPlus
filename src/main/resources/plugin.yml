@@ -1,5 +1,7 @@
 name: CSGO-CratesPlus
+author: ConnorLinfoot, updated by poma_123
 description: CSGO Opener for CratesPlus
 main: plus.crates.csgo.CSGO
 version: ${project.version}
 depend: [CratesPlus]
+api-version: 1.13
